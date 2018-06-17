@@ -41,5 +41,8 @@ main(int argc, char *argv[])
             errExit("writing to file");
     }
 
+    if(close(outputFd) == -1)
+        errExit("closing file");
+
     return(0);
 }
